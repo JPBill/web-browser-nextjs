@@ -1,4 +1,5 @@
 import NoResultsMessage from '@/components/search/NoResultsMessage';
+import WebResults from '@/components/search/WebResults';
 
 export default async function WebSearchPage({ searchParams }) {
   const response = await fetch(
@@ -10,5 +11,5 @@ export default async function WebSearchPage({ searchParams }) {
   if (!results) {
     return <NoResultsMessage searchTerm={searchParams.searchTerm} />;
   }
-  return <div>WebSearchPage</div>;
+  return <div>{results && <WebResults results={data} />}</div>;
 }
