@@ -1,3 +1,4 @@
+import ImageResults from '@/components/search/ImageResults';
 import NoResultsMessage from '@/components/search/NoResultsMessage';
 
 export default async function ImageSearchPage({ searchParams }) {
@@ -10,5 +11,5 @@ export default async function ImageSearchPage({ searchParams }) {
   if (!results) {
     return <NoResultsMessage searchTerm={searchParams.searchTerm} />;
   }
-  return <div>ImageSearchPage</div>;
+  return <div>{results && <ImageResults results={data} />}</div>;
 }
