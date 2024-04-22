@@ -6,6 +6,7 @@ import Image from 'next/image';
 import useOnClickOutside from '@/hooks/useOnClickOutside';
 import GoogleProductsMenu from '../GoogleProductsMenu';
 import Input from './Input';
+import Tabs from './Tabs';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -61,6 +62,7 @@ export default function Header() {
           </button>
         </div>
       </div>
+      <Tabs />
     </header>
   );
 }
