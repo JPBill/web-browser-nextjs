@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Pagination from './Pagination';
 
 export default function ImageResults({ results }) {
   return (
@@ -27,6 +28,9 @@ export default function ImageResults({ results }) {
             </div>
           );
         })}
+      </div>
+      <div className="max-w-xl sm:max-w-2xl mx-auto">
+        <Pagination />
       </div>
     </div>
   );
